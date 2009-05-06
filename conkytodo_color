@@ -156,8 +156,4 @@ show_graph_range no
 
 TEXT
 ${alignc}${color}${font 15}TODO.TXT - ${execi 10 ~/todo.sh -p ls | head --lines=-2 | wc -l}
-${color yellow}${font}${execi 10 ~/todo.sh -p ls | grep -s \(A\)}
-${color lightgreen}${font}${execi 10 ~/todo.sh -p ls | grep -s \(B\)}
-${color lightblue}${font}${execi 10 ~/todo.sh -p ls | grep -s \(C\)}
-${color}${font}${execi 10 ~/todo.sh -p ls | grep -s \([D-Z]\)}
-${color}${font}${execi 10 ~/todo.sh -p ls | grep -s -v \([A-Z]\) | head --lines=-2}
+${execpi 10 ./scripts/color_todo.sh}
